@@ -39,3 +39,10 @@ Před zveřejněním:
 ## Licence a podklady
 
 Projekt vychází z dodaných souborů. Před komerčním zveřejněním ověřte práva ke všem použitým textům, fontům, obrázkům a značkám.
+
+
+## Optimalizace rychlosti
+
+Tato verze omezuje zbytečně časté překreslování časovače, snižuje rozlišení interního canvasu na velmi jemných displejích, odstraňuje externí blokující načítání fontu a přednačítá interní stránku při najetí na odkaz nebo při jeho zaměření. Některé náročné rozostřovací efekty byly omezeny, aby se web lépe choval i na slabších telefonech.
+
+Soubor `_headers` nastavuje cache hlavičky na hostingu, který tento formát podporuje (např. Cloudflare Pages). Adresa `*.workers.dev` sama o sobě neukazuje, jak je Worker naprogramovaný. Pokud web obsluhuje vlastní Cloudflare Worker, musí se cache hlavičky nastavit také v jeho odpovědích; samotné nahrání `_headers` je u vlastního Workeru nezaručuje.
