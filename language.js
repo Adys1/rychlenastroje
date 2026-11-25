@@ -134,3 +134,4 @@
     requestAnimationFrame(() => { queued = false; applyLanguage(currentLanguage); });
   }).observe(document.body, { childList: true, subtree: true, characterData: true });
 })();
+
