@@ -48,3 +48,4 @@
  $('listen').addEventListener('click',()=>{if(!('speechSynthesis'in window))return toast('Hlasový náhled tento prohlížeč nepodporuje.');const subject=$('topic').value.trim();if(!subject)return toast('Napiš nejdřív téma.');speechSynthesis.cancel();const u=new SpeechSynthesisUtterance('Dnešní video: '+subject+'. '+scriptFor(subject)[0]);u.lang='cs-CZ';const v=speechSynthesis.getVoices().find(x=>x.lang.toLowerCase().startsWith('cs'));if(v)u.voice=v;speechSynthesis.speak(u);});
  $('quality').addEventListener('change',()=>{$('resolution').textContent=Number($('quality').value)===1080?'1920 × 1080':'1280 × 720';});
 })();
+
