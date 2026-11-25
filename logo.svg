@@ -14,3 +14,4 @@
   <text x="27" y="46" fill="#fff" font-family="Arial,sans-serif" font-size="39" font-weight="800" text-anchor="middle">R</text>
   <path d="M47 10l2.2 5.8L55 18l-5.8 2.2L47 26l-2.2-5.8L39 18l5.8-2.2L47 10z" fill="#fff" filter="url(#glow)"/>
 </svg>
+
